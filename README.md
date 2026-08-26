@@ -15,7 +15,12 @@ figure in the report.
 ```
 arduino/   sensor firmware (Arduino IDE sketches, ST7735 TFT readout)
 matlab/    analysis pipeline (21 scripts)
+docs/      method notes — how the code implements what the report reports
 ```
+
+**[docs/METHODS.md](docs/METHODS.md)** documents the methods the code implements: the
+feature pipeline, the separability measure, the PCA, the leave-one-banknote-out
+harness, the two-stage cascade, and the controls of each later experiment.
 
 ## Arduino firmware
 
@@ -76,15 +81,14 @@ setenv("BANKNOTE_REGION", "white");
 banknotes
 ```
 
-## Relation to the report appendices
+## Relation to the report
 
-| Appendix | Source in this repository |
+The dissertation does not reproduce the code. Each appendix that concerns the
+software points here instead:
+
+| Appendix | Where the code lives |
 |---|---|
-| A — AS7262 Arduino code | `arduino/AS7262_with_LED/` |
-| B — AS7341 Arduino code | `arduino/AS7341_with_LED/` |
-| C — MATLAB main pipeline | `matlab/banknotes.m` |
-| D — MATLAB later experiments | `matlab/loadNoteSet.m`, `condition_analysis.m`, `fullspectrum_nested.m`, `ageing_analysis.m` |
+| A — AS7262 firmware | `arduino/AS7262_with_LED/` |
+| B — AS7341 firmware | `arduino/AS7341_with_LED/` |
+| C — MATLAB analysis code | `matlab/`, documented in [docs/METHODS.md](docs/METHODS.md) |
 
-The appendices reproduce extracts only: the parts that define a method. This repository
-holds the complete scripts. Comments in the Arduino sketches are in the original Chinese;
-the appendix listings show the same code with the comments translated.
