@@ -1,0 +1,21 @@
+# MATLAB
+*.asv
+*.m~
+*.mat
+*.mex*
+*.slxc
+slprj/
+codegen/
+
+# Arduino / PlatformIO
+build/
+.pio/
+*.hex
+*.elf
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
